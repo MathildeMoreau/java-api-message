@@ -1,0 +1,39 @@
+form{
+	display: flex;
+	justify-content: space-around;
+	border : 1px solid black;
+	border-radius : 10px;
+	position: sticky;
+	bottom: 0;
+	background: white;
+}
+
+input{
+	border-radius: 10px;
+	padding: 10px 50px;
+	margin: 0 20px;
+}
+
+.form-div{
+	padding: 20px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-input{
+	margin: 10px;
+	border: none;
+	background: #5962a654;
+}
+
+.discussion-div{
+	margin: 20px;
+    background: #80008047;
+    border-radius: 10px 0;
+    width: 20vw;
+}
+
+h4, p {
+	padding: 10px;
+}

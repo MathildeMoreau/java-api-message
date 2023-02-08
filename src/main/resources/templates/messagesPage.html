@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Les messages</title>
+<link rel="stylesheet" href="../static/style/style.css" th:href="@{/style/style.css}">
+</head>
+<body>
+
+	<h1>Les messages</h1>
+	
+	<div th:each="msg:${listeMessages}" class="discussion-div">
+		<h4>
+			<span th:text="${msg.author}"></span>
+			<span th:text="${#temporals.format(msg.getTimestamp(), 'dd-MM-YYYY HH:mm')}"></span>
+		</h4>
+		<p th:text="${msg.getMessages()}">
+	</div>
+	
+	<form action="#" th:action="@{/messages}" th:object="${newMessage}" method="POST">
+	
+	<div class="form-div">
+		<label for="author">Auteur </label>
+		<input id="author" name="author" type="text" th:field="*{author}">
+	</div>
+
+	<div class="form-div">
+		<label for="message">Message </label>
+		<input id="message" name="message" type="text" th:field="*{messages}">
+	</div>
+		
+		<input type="submit" class="submit-input">
+	</form>
+	
+	
+</body>
+</html>
